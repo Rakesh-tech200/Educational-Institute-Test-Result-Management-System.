@@ -1,6 +1,6 @@
-#The Student Result Management System is a full-fledged web application designed to manage student records efficiently. 
-Features
+#The Student Result Management System is a full-fledged web application designed to manage student test result records and others efficiently. 
 
+Features
 Add and manage student records
 View and update student results
 Delete student data when needed
