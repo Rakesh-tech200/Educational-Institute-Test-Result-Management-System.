@@ -4,7 +4,7 @@ Features
 Add and manage student records
 View and update student results
 Delete student data when needed
-Simple and intuitive user interface
+Simple and intuitive user interface.
 
 Tech Stack
 Backend: Node.js, Express.js
