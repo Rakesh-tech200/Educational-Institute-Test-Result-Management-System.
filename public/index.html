@@ -88,10 +88,10 @@ async function handleLogin(event) {
 
     const result = await response.json();
     if (result.success) {
-      // Redirect to the appropriate dashboard
+      // Redirect to the appropriate dashboard.....
       window.location.href = result.redirect;
     } else {
-      alert(result.message); // Show error message
+      alert(result.message); 
     }
   } catch (error) {
     console.error('Error logging in:', error);
