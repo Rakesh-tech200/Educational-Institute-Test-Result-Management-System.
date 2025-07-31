@@ -69,11 +69,11 @@
     function showLogin(role) {
   const modal = document.getElementById('id01');
   modal.style.display = "block";
-  document.getElementById('role').value = role.toLowerCase(); // Set role to 'teacher' or 'student'
+  document.getElementById('role').value = role.toLowerCase(); 
 }
 
 async function handleLogin(event) {
-  event.preventDefault(); // Prevent form submission from reloading the page
+  event.preventDefault();
 
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
@@ -99,7 +99,7 @@ async function handleLogin(event) {
   }
 }
 
-// Modal close functionality
+// Modal close functionality.............
 var modal = document.getElementById('id01');
 window.onclick = function (event) {
   if (event.target == modal) {
