@@ -42,26 +42,16 @@ app.post('/login', (req, res) => {
   if (user) {
     const redirectPath = role === 'teacher'
       ? '/teacher-dashboard.html'
-      : `/student-dashboard.html?username=${username}`; // Add username to query string
-    console.log("Redirect Path:", redirectPath); // Debug log
+      : `/student-dashboard.html?username=${username}`; 
+    console.log("Redirect Path:", redirectPath); 
     res.json({ success: true, redirect: redirectPath });
   } else {
-    console.error("Invalid credentials:", { username, password, role }); // Debug log
+    console.error("Invalid credentials:", { username, password, role }); 
     res.status(401).json({ success: false, message: 'Invalid username or password' });
   }
 });
 
-// Fetch Results based on Role
-// Assuming data.json structure:
-// {
-//   "users": [...], 
-//   "results": [
-//     { "id": 1, "student_username": "student1", "subjectsMarks": [
-//       { "subject": "Math", "marks": 85 },
-//       { "subject": "English", "marks": 90 }
-//     ] }
-//   ]
-// }
+
 
 app.get('/results', (req, res) => {
   const { role, username } = req.query;
@@ -134,7 +124,7 @@ app.post('/add-student', (req, res) => {
 
 
 
-// Start the server
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
