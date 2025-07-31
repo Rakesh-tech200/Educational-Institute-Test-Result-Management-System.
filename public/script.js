@@ -1,9 +1,9 @@
-// Show the login modal based on the button clicked (Student or Teacher)
+
 function showLogin(role) {
     var modal = document.getElementById('id01');
     modal.style.display = 'block';
   
-    // Pre-fill the role in the dropdown based on the selected button (Student or Teacher)
+  
     var roleSelect = document.getElementById('role');
     if (role === 'Student') {
       roleSelect.value = 'student';
@@ -11,17 +11,16 @@ function showLogin(role) {
       roleSelect.value = 'teacher';
     }
   }
-  
-  // Handle form submission (login)
+ 
   document.querySelector('.modal-content form').onsubmit = function(event) {
-    event.preventDefault();  // Prevent default form submission
+    event.preventDefault();  
   
-    // Get the input values for username, password, and role
+
     var username = document.querySelector('input[name="uname"]').value;
     var password = document.querySelector('input[name="psw"]').value;
     var role = document.querySelector('select[name="role"]').value;
   
-    // Check if username and password are provided
+
     if (username === '' || password === '') {
       alert('Please fill in all fields.');
       return;
