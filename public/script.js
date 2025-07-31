@@ -26,11 +26,11 @@ function showLogin(role) {
       return;
     }
   
-    // Fetch data from data.json
+   
     fetch('data.json')
       .then(response => response.json())
       .then(data => {
-        // Validate login based on the role (Student or Teacher)
+       
         let validUser = false;
         if (role === 'student') {
           validUser = data.students.some(student => student.username === username && student.password === password);
@@ -38,14 +38,14 @@ function showLogin(role) {
           validUser = data.teachers.some(teacher => teacher.username === username && teacher.password === password);
         }
   
-        // If user is valid
+
         if (validUser) {
           alert(`${role.charAt(0).toUpperCase() + role.slice(1)} Login Successful`);
-          // Redirect based on role
+       
           if (role === 'student') {
-            window.location.href = 'C:\Users\User\OneDrive\Desktop\final\public\student-dashboard.html';  // Replace with actual student dashboard URL
+            window.location.href = 'C:\Users\User\OneDrive\Desktop\final\public\student-dashboard.html';  
           } else if (role === 'teacher') {
-            window.location.href = 'C:\Users\User\OneDrive\Desktop\final\public\teacher-dashboard.html';  // Replace with actual teacher dashboard URL
+            window.location.href = 'C:\Users\User\OneDrive\Desktop\final\public\teacher-dashboard.html'; 
           }
         } else {
           alert('Invalid credentials');
@@ -56,11 +56,11 @@ function showLogin(role) {
         alert('Error during login. Please try again later.');
       });
   
-    // Close the modal after login attempt
+   
     document.getElementById('id01').style.display = 'none';
   };
   
-  // Close the modal when clicking outside
+
   window.onclick = function(event) {
     var modal = document.getElementById('id01');
     if (event.target == modal) {
